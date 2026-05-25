@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AABB002AAABB002AAABB002A /* DumptruckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB001AAABB001AAABB001A /* DumptruckApp.swift */; };
+		AABB002BAABB002BAABB002B /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB001BAABB001BAABB001B /* StatusItemController.swift */; };
+		AABB002CAABB002CAABB002C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AABB001EAABB001EAABB001E /* Assets.xcassets */; };
+		AABB0030AABB0030AABB0030 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB0020AABB0020AABB0020 /* SettingsStore.swift */; };
+		AABB0031AABB0031AABB0031 /* CapturePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB0021AABB0021AABB0021 /* CapturePanel.swift */; };
+		AABB0032AABB0032AABB0032 /* CaptureWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB0022AABB0022AABB0022 /* CaptureWindowController.swift */; };
+		AABB0033AABB0033AABB0033 /* CaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB0023AABB0023AABB0023 /* CaptureView.swift */; };
+		AABB0034AABB0034AABB0034 /* MarkdownTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB0024AABB0024AABB0024 /* MarkdownTextView.swift */; };
+		AABB0035AABB0035AABB0035 /* MarkdownHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB0025AABB0025AABB0025 /* MarkdownHighlighter.swift */; };
+		AABB0036AABB0036AABB0036 /* FilenameTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB0026AABB0026AABB0026 /* FilenameTemplate.swift */; };
+		AABB0037AABB0037AABB0037 /* FileWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB0027AABB0027AABB0027 /* FileWriter.swift */; };
+		AABB0038AABB0038AABB0038 /* DraftStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB0028AABB0028AABB0028 /* DraftStore.swift */; };
+		AABB0039AABB0039AABB0039 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB0029AABB0029AABB0029 /* SoundPlayer.swift */; };
+		AABB003DAABB003DAABB003D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB002DAABB002DAABB002D /* SettingsView.swift */; };
+		AABB003EAABB003EAABB003E /* ShortcutNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB002EAABB002EAABB002E /* ShortcutNames.swift */; };
+		AABB003FAABB003FAABB003F /* LaunchAtLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB002FAABB002FAABB002F /* LaunchAtLoginManager.swift */; };
+		AABBPKG01AABBPKG01AABBPKG01 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = AABBPKGREFAABBPKGREFAABBPKGRE /* KeyboardShortcuts */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AABB001AAABB001AAABB001A /* DumptruckApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DumptruckApp.swift; sourceTree = "<group>"; };
+		AABB001BAABB001BAABB001B /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
+		AABB001CAABB001CAABB001C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AABB001DAABB001DAABB001D /* Dumptruck.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dumptruck.entitlements; sourceTree = "<group>"; };
+		AABB001EAABB001EAABB001E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AABB001FAABB001FAABB001F /* Dumptruck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dumptruck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AABB0020AABB0020AABB0020 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		AABB0021AABB0021AABB0021 /* CapturePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePanel.swift; sourceTree = "<group>"; };
+		AABB0022AABB0022AABB0022 /* CaptureWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureWindowController.swift; sourceTree = "<group>"; };
+		AABB0023AABB0023AABB0023 /* CaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureView.swift; sourceTree = "<group>"; };
+		AABB0024AABB0024AABB0024 /* MarkdownTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTextView.swift; sourceTree = "<group>"; };
+		AABB0025AABB0025AABB0025 /* MarkdownHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownHighlighter.swift; sourceTree = "<group>"; };
+		AABB0026AABB0026AABB0026 /* FilenameTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilenameTemplate.swift; sourceTree = "<group>"; };
+		AABB0027AABB0027AABB0027 /* FileWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWriter.swift; sourceTree = "<group>"; };
+		AABB0028AABB0028AABB0028 /* DraftStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftStore.swift; sourceTree = "<group>"; };
+		AABB0029AABB0029AABB0029 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		AABB002DAABB002DAABB002D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AABB002EAABB002EAABB002E /* ShortcutNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutNames.swift; sourceTree = "<group>"; };
+		AABB002FAABB002FAABB002F /* LaunchAtLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AABB004CAABB004CAABB004C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABBPKG01AABBPKG01AABBPKG01 /* KeyboardShortcuts in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AABB003AAABB003AAABB003A = {
+			isa = PBXGroup;
+			children = (
+				AABB003BAABB003BAABB003B /* Dumptruck */,
+				AABB003CAABB003CAABB003C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AABB003BAABB003BAABB003B /* Dumptruck */ = {
+			isa = PBXGroup;
+			children = (
+				AABB001AAABB001AAABB001A /* DumptruckApp.swift */,
+				AABB001BAABB001BAABB001B /* StatusItemController.swift */,
+				AABB0021AABB0021AABB0021 /* CapturePanel.swift */,
+				AABB0022AABB0022AABB0022 /* CaptureWindowController.swift */,
+				AABB0023AABB0023AABB0023 /* CaptureView.swift */,
+				AABB0024AABB0024AABB0024 /* MarkdownTextView.swift */,
+				AABB0025AABB0025AABB0025 /* MarkdownHighlighter.swift */,
+				AABB0020AABB0020AABB0020 /* SettingsStore.swift */,
+				AABB002DAABB002DAABB002D /* SettingsView.swift */,
+				AABB0026AABB0026AABB0026 /* FilenameTemplate.swift */,
+				AABB0027AABB0027AABB0027 /* FileWriter.swift */,
+				AABB0028AABB0028AABB0028 /* DraftStore.swift */,
+				AABB0029AABB0029AABB0029 /* SoundPlayer.swift */,
+				AABB002EAABB002EAABB002E /* ShortcutNames.swift */,
+				AABB002FAABB002FAABB002F /* LaunchAtLoginManager.swift */,
+				AABB001EAABB001EAABB001E /* Assets.xcassets */,
+				AABB001CAABB001CAABB001C /* Info.plist */,
+				AABB001DAABB001DAABB001D /* Dumptruck.entitlements */,
+			);
+			path = Dumptruck;
+			sourceTree = "<group>";
+		};
+		AABB003CAABB003CAABB003C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AABB001FAABB001FAABB001F /* Dumptruck.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AABB007AAABB007AAABB007A /* Dumptruck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AABB006BAABB006BAABB006B /* Build configuration list for PBXNativeTarget "Dumptruck" */;
+			buildPhases = (
+				AABB004AAABB004AAABB004A /* Sources */,
+				AABB004BAABB004BAABB004B /* Resources */,
+				AABB004CAABB004CAABB004C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dumptruck;
+			packageProductDependencies = (
+				AABBPKGREFAABBPKGREFAABBPKGRE /* KeyboardShortcuts */,
+			);
+			productName = Dumptruck;
+			productReference = AABB001FAABB001FAABB001F /* Dumptruck.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AABB008AAABB008AAABB008A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AABB007AAABB007AAABB007A = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = AABB006AAABB006AAABB006A /* Build configuration list for PBXProject "Dumptruck" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AABB003AAABB003AAABB003A;
+			packageReferences = (
+				AABBPKGURLAABBPKGURLAABBPKGURL /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+			);
+			productRefGroup = AABB003CAABB003CAABB003C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AABB007AAABB007AAABB007A /* Dumptruck */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AABB004BAABB004BAABB004B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABB002CAABB002CAABB002C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AABB004AAABB004AAABB004A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABB002AAABB002AAABB002A /* DumptruckApp.swift in Sources */,
+				AABB002BAABB002BAABB002B /* StatusItemController.swift in Sources */,
+				AABB0031AABB0031AABB0031 /* CapturePanel.swift in Sources */,
+				AABB0032AABB0032AABB0032 /* CaptureWindowController.swift in Sources */,
+				AABB0033AABB0033AABB0033 /* CaptureView.swift in Sources */,
+				AABB0034AABB0034AABB0034 /* MarkdownTextView.swift in Sources */,
+				AABB0035AABB0035AABB0035 /* MarkdownHighlighter.swift in Sources */,
+				AABB0030AABB0030AABB0030 /* SettingsStore.swift in Sources */,
+				AABB003DAABB003DAABB003D /* SettingsView.swift in Sources */,
+				AABB0036AABB0036AABB0036 /* FilenameTemplate.swift in Sources */,
+				AABB0037AABB0037AABB0037 /* FileWriter.swift in Sources */,
+				AABB0038AABB0038AABB0038 /* DraftStore.swift in Sources */,
+				AABB0039AABB0039AABB0039 /* SoundPlayer.swift in Sources */,
+				AABB003EAABB003EAABB003E /* ShortcutNames.swift in Sources */,
+				AABB003FAABB003FAABB003F /* LaunchAtLoginManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AABB005AAABB005AAABB005A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AABB005BAABB005BAABB005B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		AABB005CAABB005CAABB005C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Dumptruck/Dumptruck.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Dumptruck/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Mat Chavez. All rights reserved.";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.matchavez.Dumptruck";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		AABB005DAABB005DAABB005D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Dumptruck/Dumptruck.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Dumptruck/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "© 2026 Mat Chavez. All rights reserved.";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.matchavez.Dumptruck";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AABB006AAABB006AAABB006A /* Build configuration list for PBXProject "Dumptruck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AABB005AAABB005AAABB005A /* Debug */,
+				AABB005BAABB005BAABB005B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AABB006BAABB006BAABB006B /* Build configuration list for PBXNativeTarget "Dumptruck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AABB005CAABB005CAABB005C /* Debug */,
+				AABB005DAABB005DAABB005D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AABBPKGURLAABBPKGURLAABBPKGURL /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AABBPKGREFAABBPKGREFAABBPKGRE /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AABBPKGURLAABBPKGURLAABBPKGURL /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AABB008AAABB008AAABB008A /* Project object */;
+}

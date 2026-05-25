@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	Dumptruck v1 ships unsigned and unsandboxed for local personal use.
+	Entitlements are intentionally minimal.
+
+	If we later move to Mac App Store distribution or hardened-runtime signing,
+	uncomment / add:
+
+		<key>com.apple.security.app-sandbox</key>
+		<true/>
+		<key>com.apple.security.files.user-selected.read-write</key>
+		<true/>      <!-- so the user-picked save folder is reachable -->
+		<key>com.apple.security.files.bookmarks.app-scope</key>
+		<true/>      <!-- so we can persist the folder across launches -->
+
+	For now, an empty dict keeps Xcode happy without granting any entitlements.
+	-->
+</dict>
+</plist>
