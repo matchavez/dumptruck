@@ -182,28 +182,21 @@ private struct EditorSettingsTab: View {
     @AppStorage(SettingsKey.editorFontName) private var editorFontName: String = SettingsDefaults.editorFontName
     @AppStorage(SettingsKey.editorFontSize) private var editorFontSize: Double = SettingsDefaults.editorFontSize
 
-    private let fontChoices: [String] = [
-        "SF Mono", "Menlo", "Monaco", "Courier New", "Helvetica Neue", "SF Pro Text"
-    ]
-
     var body: some View {
         Form {
             Section("Font") {
-                Picker("Family", selection: $editorFontName) {
-                    ForEach(fontChoices, id: \.self) { Text($0).tag($0) }
+                HStack {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(editorFontName)
+                            .font(.custom(editorFontName, size: 13))
+                        Text("\(Int(editorFontSize)) pt")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    Spacer()
+                    FontPanelButton(fontName: $editorFontName, fontSize: $editorFontSize)
                 }
-                // Range and step must be Double to match $editorFontSize's
-                // binding type — `10...24` would otherwise infer as ClosedRange<Int>.
-                Stepper(
-                    value: $editorFontSize,
-                    in: 10.0...24.0,
-                    step: 1.0
-                ) {
-                    Text("Size: \(Int(editorFontSize)) pt")
-                }
-                .accessibilityValue("\(Int(editorFontSize)) points")
 
-                // Live preview chip.
                 Text("The quick brown fox 🦊 # heading **bold**")
                     .font(.custom(editorFontName, size: editorFontSize))
                     .padding(8)
@@ -213,6 +206,52 @@ private struct EditorSettingsTab: View {
         }
         .formStyle(.grouped)
         .padding()
+        .onDisappear {
+            NSFontPanel.shared.orderOut(nil)
+            NSFontManager.shared.target = nil
+        }
+    }
+}
+
+// MARK: - Font panel bridge
+
+private struct FontPanelButton: NSViewRepresentable {
+    @Binding var fontName: String
+    @Binding var fontSize: Double
+
+    func makeCoordinator() -> Coordinator { Coordinator(fontName: $fontName, fontSize: $fontSize) }
+
+    func makeNSView(context: Context) -> NSButton {
+        NSButton(title: "Choose Font…", target: context.coordinator, action: #selector(Coordinator.showFontPanel(_:)))
+    }
+
+    func updateNSView(_ nsView: NSButton, context: Context) {}
+
+    final class Coordinator: NSObject {
+        var fontName: Binding<String>
+        var fontSize: Binding<Double>
+
+        init(fontName: Binding<String>, fontSize: Binding<Double>) {
+            self.fontName = fontName
+            self.fontSize = fontSize
+        }
+
+        @objc func showFontPanel(_ sender: Any?) {
+            let current = NSFont(name: fontName.wrappedValue, size: CGFloat(fontSize.wrappedValue))
+                ?? NSFont.systemFont(ofSize: CGFloat(fontSize.wrappedValue))
+            NSFontManager.shared.setSelectedFont(current, isMultiple: false)
+            NSFontManager.shared.target = self
+            NSFontPanel.shared.makeKeyAndOrderFront(sender)
+        }
+
+        @objc func changeFont(_ sender: NSFontManager?) {
+            guard let manager = sender else { return }
+            let current = NSFont(name: fontName.wrappedValue, size: CGFloat(fontSize.wrappedValue))
+                ?? NSFont.systemFont(ofSize: CGFloat(fontSize.wrappedValue))
+            let newFont = manager.convert(current)
+            fontName.wrappedValue = newFont.fontName
+            fontSize.wrappedValue = Double(newFont.pointSize)
+        }
     }
 }
 

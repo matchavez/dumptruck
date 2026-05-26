@@ -1,38 +1,32 @@
-# Dumptruck
+# Dumptruck 🚛
 
 A native macOS menubar app for fast, Markdown-friendly text capture.
 
-Press a global shortcut (default `⌘\`), type, hit **Return**, and your text is saved as a `.md` file in a folder of your choice. Markdown is syntax-highlighted as you type. Drafts persist between sessions so nothing is ever lost.
+![Dumptruck capture window](images/screenshot.png)
+
+Press a global shortcut (default `⌘\`), type, hit **Return**, and your note is saved as a `.md` file in a folder of your choice. Markdown is syntax-highlighted as you type. Drafts persist between sessions so nothing is ever lost.
 
 No Dock icon. No browser. No login. Just capture.
 
-## Status
+---
 
-v0.1.0 — local personal build, unsigned. See `PROGRESS.md` for the running build log.
+## Install
 
-## Requirements
-
-- macOS 14 Sonoma or later
-- Xcode 15.0 or later
-- Swift 5.9+
-
-## Building
-
-1. Open `Dumptruck.xcodeproj` in Xcode.
-2. On first open, Xcode will resolve the [KeyboardShortcuts](https://github.com/sindresorhus/KeyboardShortcuts) Swift Package automatically. If it doesn't, choose **File → Packages → Resolve Package Versions**.
-3. Pick the `Dumptruck` scheme. Run with `⌘R`.
-
-The first time you press **Return** to save, Dumptruck will prompt you to pick a save folder. The suggested default is `~/Documents/Dumptruck`, created on first launch.
-
-## Running an unsigned local build
-
-Because this build is unsigned, the first launch from Finder will be blocked by Gatekeeper. To run it once and let macOS remember the approval:
-
-```
-xattr -dr com.apple.quarantine /path/to/Dumptruck.app
+```bash
+brew tap matchavez/dumptruck
+brew install --cask dumptruck
 ```
 
-Or, in the Finder, right-click the app → **Open** → confirm in the dialog.
+Requires macOS 14 Sonoma or later.
+
+> **First launch:** Because Dumptruck is not yet signed with a paid Apple Developer certificate, macOS will block it on the first open. Right-click the app → **Open** → confirm in the dialog. You only need to do this once.
+>
+> Alternatively, from Terminal:
+> ```bash
+> xattr -dr com.apple.quarantine /Applications/Dumptruck.app
+> ```
+
+---
 
 ## Settings
 
@@ -42,6 +36,17 @@ Open with `⌘,` from the right-click menu of the menubar icon, or from inside a
 - **Shortcut** — record a new global hotkey (default `⌘\`)
 - **Editor** — font family and size
 - **About** — version
+
+## Keyboard
+
+| Key | Action |
+|---|---|
+| `⌘\` (default) | Toggle capture window from anywhere |
+| `Return` | Save and close |
+| `Shift+Return` | Insert newline |
+| `Esc` | Close without saving (draft is kept) |
+| `⌘,` | Open Settings |
+| `⌘Q` | Quit |
 
 ## Filename format
 
@@ -62,17 +67,6 @@ Slugging rules:
 - **Drafts**: `~/Library/Application Support/Dumptruck/draft.md`
 - **Settings**: `~/Library/Preferences/com.matchavez.Dumptruck.plist`
 
-## Keyboard
-
-| Key | Action |
-|---|---|
-| `⌘\` (default) | Toggle capture window from anywhere |
-| `Return` | Save and close |
-| `Shift+Return` | Insert newline |
-| `Esc` | Close without saving (draft is kept) |
-| `⌘,` | Open Settings |
-| `⌘Q` | Quit |
-
 ## Accessibility
 
 - All controls have explicit VoiceOver labels.
@@ -91,27 +85,33 @@ Slugging rules:
 
 **Sound doesn't play.** Sound is on by default but respects system Do Not Disturb / Focus. To force-test, raise system volume and disable Focus, then save a note.
 
+## Building from source
+
+1. Open `Dumptruck.xcodeproj` in Xcode 15 or later.
+2. On first open, Xcode resolves the [KeyboardShortcuts](https://github.com/sindresorhus/KeyboardShortcuts) package automatically. If not: **File → Packages → Resolve Package Versions**.
+3. Pick the `Dumptruck` scheme and run with `⌘R`.
+
 ## Architecture
 
 See `PROJECT_PLAN.md` §3.
 
 ```
 Dumptruck/
-├── DumptruckApp.swift         @main, AppDelegate, KeyboardShortcuts wiring
-├── StatusItemController.swift Menubar NSStatusItem + left/right-click routing
-├── CapturePanel.swift         Non-activating NSPanel subclass
+├── DumptruckApp.swift            @main, AppDelegate, KeyboardShortcuts wiring
+├── StatusItemController.swift    Menubar NSStatusItem + left/right-click routing
+├── CapturePanel.swift            Non-activating NSPanel subclass
 ├── CaptureWindowController.swift Lifecycle: show/hide/toggle, frame memory, save plumbing
-├── CaptureView.swift          SwiftUI host: editor + saved-flash overlay
-├── MarkdownTextView.swift     NSViewRepresentable<NSTextView> with key routing
-├── MarkdownHighlighter.swift  NSTextStorageDelegate for inline MD syntax styling
-├── SettingsStore.swift        @AppStorage keys, save-folder bookmark, defaults
-├── SettingsView.swift         Tabbed settings UI
-├── FilenameTemplate.swift     Pure: (body, date, template) → safe filename
-├── FileWriter.swift           Atomic write into the user-selected save folder
-├── DraftStore.swift           Auto-saved draft in Application Support
-├── SoundPlayer.swift          NSSound wrapper, honors Settings toggle
-├── ShortcutNames.swift        KeyboardShortcuts.Name + default ⌘\
-└── LaunchAtLoginManager.swift SMAppService wrapper
+├── CaptureView.swift             SwiftUI host: editor + saved-flash overlay
+├── MarkdownTextView.swift        NSViewRepresentable<NSTextView> with key routing
+├── MarkdownHighlighter.swift     NSTextStorageDelegate for inline MD syntax styling
+├── SettingsStore.swift           @AppStorage keys, save-folder bookmark, defaults
+├── SettingsView.swift            Tabbed settings UI
+├── FilenameTemplate.swift        Pure: (body, date, template) → safe filename
+├── FileWriter.swift              Atomic write into the user-selected save folder
+├── DraftStore.swift              Auto-saved draft in Application Support
+├── SoundPlayer.swift             NSSound wrapper, honors Settings toggle
+├── ShortcutNames.swift           KeyboardShortcuts.Name + default ⌘\
+└── LaunchAtLoginManager.swift    SMAppService wrapper
 ```
 
 ## License
