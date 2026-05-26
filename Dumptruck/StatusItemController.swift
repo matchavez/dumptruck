@@ -17,6 +17,7 @@ private enum MenubarIcon {
     static let tooltip = "Dumptruck — Quick Capture"
 }
 
+@MainActor
 final class StatusItemController: NSObject {
     private let statusItem: NSStatusItem
     private let rightClickMenu: NSMenu
@@ -144,15 +145,7 @@ final class StatusItemController: NSObject {
     // MARK: - Menu actions
 
     @objc private func openSettings() {
-        // SwiftUI's Settings scene exposes a private selector to open it.
-        // The literal "showSettingsWindow:" is required for macOS 14+ ("Sonoma"+).
-        // Falls back to the older selector for safety.
-        if NSApp.responds(to: Selector(("showSettingsWindow:"))) {
-            NSApp.sendAction(Selector(("showSettingsWindow:")), to: nil, from: nil)
-        } else {
-            NSApp.sendAction(Selector(("showPreferencesWindow:")), to: nil, from: nil)
-        }
-        NSApp.activate(ignoringOtherApps: true)
+        SettingsWindowController.shared.show()
     }
 
     @objc private func openAbout() {

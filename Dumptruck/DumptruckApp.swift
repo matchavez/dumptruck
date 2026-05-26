@@ -26,6 +26,7 @@ struct DumptruckApp: App {
 ///   * the menubar status item (via StatusItemController)
 ///   * the global hotkey registration (via KeyboardShortcuts)
 ///   * lifecycle plumbing (activation policy, observers)
+@MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate {
     private var statusItemController: StatusItemController?
 

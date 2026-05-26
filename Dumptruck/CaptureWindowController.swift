@@ -109,10 +109,21 @@ final class CaptureWindowController: NSObject {
         panel.contentView = hc.view
 
         // Make the editor first responder so typing starts immediately.
-        DispatchQueue.main.async {
-            if let textView = self.findFirstTextView(in: hc.view) {
-                panel.makeFirstResponder(textView)
-            }
+        // SwiftUI's hosting controller may not have laid out the subview tree
+        // by the time we arrive here, so we retry a couple of times before
+        // giving up. If we still can't find it the editor is reachable via
+        // a single click — not ideal, but not broken.
+        focusEditor(in: hc.view, attemptsRemaining: 5)
+    }
+
+    private func focusEditor(in view: NSView, attemptsRemaining: Int) {
+        if let textView = findFirstTextView(in: view) {
+            _ = panel?.makeFirstResponder(textView)
+            return
+        }
+        guard attemptsRemaining > 0 else { return }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.02) { [weak self] in
+            self?.focusEditor(in: view, attemptsRemaining: attemptsRemaining - 1)
         }
     }
 
@@ -140,6 +151,8 @@ final class CaptureWindowController: NSObject {
 
         do {
             let url = try fileWriter.write(body: body, into: folder)
+            draftDebounce?.cancel()
+            draftDebounce = nil
             draftStore.clear()
             if SettingsStore.shared.soundEnabled {
                 soundPlayer.playSaveSound()
@@ -216,7 +229,7 @@ final class CaptureWindowController: NSObject {
         let rect = NSRectFromString(raw)
         guard rect.size.width > 100, rect.size.height > 80 else { return nil }
         // Clamp to a screen that still exists (in case the monitor was unplugged).
-        if NSScreen.screens.contains(where: { NSIntersectsRect($0.visibleFrame, rect) }) {
+        if NSScreen.screens.contains(where: { $0.visibleFrame.intersects(rect) }) {
             return rect
         }
         return nil

@@ -1,0 +1,60 @@
+# macOS noise
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Xcode user state
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad/
+
+# Xcode workspace junk
+*.xcworkspace/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/xcshareddata/WorkspaceSettings.xcsettings
+
+# Build artifacts
+build/
+DerivedData/
+*.xcarchive
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+*.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+
+# Carthage / CocoaPods (not used here, but in case future)
+Carthage/Build/
+Pods/
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Crashlytics
+crashlytics-build.properties
+
+# Profiling / tooling
+*.profraw
+*.profdata
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+.vs/
+
+# Dumptruck-specific: the user's saved notes live in ~/Documents/Dumptruck by
+# default, OUTSIDE this repo, so nothing to ignore there. But the user might
+# point Dumptruck at this folder one day — keep .md files in the repo tracked,
+# but ignore an accidental local "drafts" or "captures" subfolder.
+captures/
+drafts/

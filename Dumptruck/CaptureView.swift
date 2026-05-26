@@ -51,6 +51,18 @@ struct CaptureView: View {
     }
 
     var body: some View {
+        VStack(spacing: 0) {
+            HStack(spacing: 6) {
+                Spacer()
+                Text("Dumptruck")
+                    .font(.system(size: 24))
+                Image(systemName: "truck.box")
+                    .font(.system(size: 24))
+                Spacer()
+            }
+            .frame(minHeight: 50, alignment: .top)
+            .padding(.top, 4)
+            .padding(.leading, 22)
         ZStack {
             MarkdownTextView(
                 text: $text,
@@ -61,6 +73,10 @@ struct CaptureView: View {
             )
             .padding(.horizontal, 4)
             .padding(.vertical, 4)
+            .overlay(
+                RoundedRectangle(cornerRadius: 6, style: .continuous)
+                    .strokeBorder(Color.primary.opacity(0.2), lineWidth: 5)
+            )
 
             // Saved-confirmation flash overlay. Single source of truth for the
             // checkmark + message. Hidden by default, fades in/out on save.
@@ -71,9 +87,10 @@ struct CaptureView: View {
                         removal: .opacity
                     ))
                     .allowsHitTesting(false)
-                    .accessibilityLiveRegion(.assertive)
+                    .accessibilityAddTraits(.updatesFrequently)
             }
         }
+        } // VStack
         .frame(minWidth: 480, minHeight: 220)
         .background(
             // .hudWindow gives us material; this just supplies a fallback color
@@ -106,7 +123,7 @@ struct CaptureView: View {
 
         switch result {
         case .success(let url):
-            statusMessage = "Saved to \(url.lastPathComponent)"
+            statusMessage = "Save Successful"
             text = ""
             flash()
         case .failure(let error):
@@ -116,26 +133,37 @@ struct CaptureView: View {
     }
 
     /// Show the saved flash for a short moment, then close the panel.
+    ///
+    /// Success flash dwell is 100ms (locked in by Mat). At that budget the
+    /// animation has to be snappy or it gets cut off by the dismiss — the
+    /// spring response is shortened from the macOS default ~0.25s so the
+    /// overlay finishes its in-animation well within the dwell window.
+    /// Error path stays longer (1.6s) so the user can read the message.
     private func flash(error: Bool = false) {
+        let successDwell: Double = 0.45
+        let errorDwell: Double = 1.6
+        let dwell = error ? errorDwell : successDwell
+
         if reduceMotion {
             // No animation: show briefly, then dismiss.
             showSavedFlash = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + (error ? 1.6 : 0.45)) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + dwell) {
                 showSavedFlash = false
                 if !error { onCancel() }
             }
         } else {
-            withAnimation(.spring(response: 0.25, dampingFraction: 0.7)) {
+            // Spring-in tuned to ~60ms so it lands inside the 100ms dwell.
+            withAnimation(.spring(response: 0.06, dampingFraction: 0.85)) {
                 showSavedFlash = true
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + (error ? 1.6 : 0.55)) {
-                withAnimation(.easeOut(duration: 0.15)) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + dwell) {
+                withAnimation(.easeOut(duration: 0.06)) {
                     showSavedFlash = false
                 }
-                // Close shortly after the flash fades, but never on error so
-                // the user can read the message and act on it.
+                // Close shortly after the flash starts fading, but never on
+                // error so the user can read the message and act on it.
                 if !error {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.18) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.04) {
                         onCancel()
                     }
                 }

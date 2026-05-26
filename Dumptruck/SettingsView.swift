@@ -192,10 +192,12 @@ private struct EditorSettingsTab: View {
                 Picker("Family", selection: $editorFontName) {
                     ForEach(fontChoices, id: \.self) { Text($0).tag($0) }
                 }
+                // Range and step must be Double to match $editorFontSize's
+                // binding type — `10...24` would otherwise infer as ClosedRange<Int>.
                 Stepper(
                     value: $editorFontSize,
-                    in: 10...24,
-                    step: 1
+                    in: 10.0...24.0,
+                    step: 1.0
                 ) {
                     Text("Size: \(Int(editorFontSize)) pt")
                 }

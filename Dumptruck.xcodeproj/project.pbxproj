@@ -10,6 +10,7 @@
 		AABB002AAABB002AAABB002A /* DumptruckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB001AAABB001AAABB001A /* DumptruckApp.swift */; };
 		AABB002BAABB002BAABB002B /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB001BAABB001BAABB001B /* StatusItemController.swift */; };
 		AABB002CAABB002CAABB002C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AABB001EAABB001EAABB001E /* Assets.xcassets */; };
+		AABBSND01AABBSND01AABBSND01 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = AABBSND00AABBSND00AABBSND00 /* Sounds */; };
 		AABB0030AABB0030AABB0030 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB0020AABB0020AABB0020 /* SettingsStore.swift */; };
 		AABB0031AABB0031AABB0031 /* CapturePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB0021AABB0021AABB0021 /* CapturePanel.swift */; };
 		AABB0032AABB0032AABB0032 /* CaptureWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB0022AABB0022AABB0022 /* CaptureWindowController.swift */; };
@@ -23,7 +24,13 @@
 		AABB003DAABB003DAABB003D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB002DAABB002DAABB002D /* SettingsView.swift */; };
 		AABB003EAABB003EAABB003E /* ShortcutNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB002EAABB002EAABB002E /* ShortcutNames.swift */; };
 		AABB003FAABB003FAABB003F /* LaunchAtLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB002FAABB002FAABB002F /* LaunchAtLoginManager.swift */; };
+		AABB0042AABB0042AABB0042 /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABB0041AABB0041AABB0041 /* SettingsWindowController.swift */; };
 		AABBPKG01AABBPKG01AABBPKG01 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = AABBPKGREFAABBPKGREFAABBPKGRE /* KeyboardShortcuts */; };
+		AABBTST21AABBTST21AABBTST21 /* FilenameTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABBTST11AABBTST11AABBTST11 /* FilenameTemplateTests.swift */; };
+		AABBTST22AABBTST22AABBTST22 /* FileWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABBTST12AABBTST12AABBTST12 /* FileWriterTests.swift */; };
+		AABBTST23AABBTST23AABBTST23 /* DraftStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABBTST13AABBTST13AABBTST13 /* DraftStoreTests.swift */; };
+		AABBTST24AABBTST24AABBTST24 /* MarkdownHighlighterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABBTST14AABBTST14AABBTST14 /* MarkdownHighlighterTests.swift */; };
+		AABBTST25AABBTST25AABBTST25 /* SettingsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABBTST15AABBTST15AABBTST15 /* SettingsStoreTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +53,14 @@
 		AABB002DAABB002DAABB002D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		AABB002EAABB002EAABB002E /* ShortcutNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutNames.swift; sourceTree = "<group>"; };
 		AABB002FAABB002FAABB002F /* LaunchAtLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginManager.swift; sourceTree = "<group>"; };
+		AABB0041AABB0041AABB0041 /* SettingsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
+		AABBSND00AABBSND00AABBSND00 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
+		AABBTST10AABBTST10AABBTST10 /* DumptruckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DumptruckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AABBTST11AABBTST11AABBTST11 /* FilenameTemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilenameTemplateTests.swift; sourceTree = "<group>"; };
+		AABBTST12AABBTST12AABBTST12 /* FileWriterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWriterTests.swift; sourceTree = "<group>"; };
+		AABBTST13AABBTST13AABBTST13 /* DraftStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftStoreTests.swift; sourceTree = "<group>"; };
+		AABBTST14AABBTST14AABBTST14 /* MarkdownHighlighterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownHighlighterTests.swift; sourceTree = "<group>"; };
+		AABBTST15AABBTST15AABBTST15 /* SettingsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +72,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AABBTST41AABBTST41AABBTST41 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -64,8 +86,21 @@
 			isa = PBXGroup;
 			children = (
 				AABB003BAABB003BAABB003B /* Dumptruck */,
+				AABBTST30AABBTST30AABBTST30 /* DumptruckTests */,
 				AABB003CAABB003CAABB003C /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		AABBTST30AABBTST30AABBTST30 /* DumptruckTests */ = {
+			isa = PBXGroup;
+			children = (
+				AABBTST11AABBTST11AABBTST11 /* FilenameTemplateTests.swift */,
+				AABBTST12AABBTST12AABBTST12 /* FileWriterTests.swift */,
+				AABBTST13AABBTST13AABBTST13 /* DraftStoreTests.swift */,
+				AABBTST14AABBTST14AABBTST14 /* MarkdownHighlighterTests.swift */,
+				AABBTST15AABBTST15AABBTST15 /* SettingsStoreTests.swift */,
+			);
+			path = DumptruckTests;
 			sourceTree = "<group>";
 		};
 		AABB003BAABB003BAABB003B /* Dumptruck */ = {
@@ -86,7 +121,9 @@
 				AABB0029AABB0029AABB0029 /* SoundPlayer.swift */,
 				AABB002EAABB002EAABB002E /* ShortcutNames.swift */,
 				AABB002FAABB002FAABB002F /* LaunchAtLoginManager.swift */,
+				AABB0041AABB0041AABB0041 /* SettingsWindowController.swift */,
 				AABB001EAABB001EAABB001E /* Assets.xcassets */,
+				AABBSND00AABBSND00AABBSND00 /* Sounds */,
 				AABB001CAABB001CAABB001C /* Info.plist */,
 				AABB001DAABB001DAABB001D /* Dumptruck.entitlements */,
 			);
@@ -97,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				AABB001FAABB001FAABB001F /* Dumptruck.app */,
+				AABBTST10AABBTST10AABBTST10 /* DumptruckTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +162,24 @@
 			productReference = AABB001FAABB001FAABB001F /* Dumptruck.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AABBTST50AABBTST50AABBTST50 /* DumptruckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AABBTST70AABBTST70AABBTST70 /* Build configuration list for PBXNativeTarget "DumptruckTests" */;
+			buildPhases = (
+				AABBTST40AABBTST40AABBTST40 /* Sources */,
+				AABBTST42AABBTST42AABBTST42 /* Resources */,
+				AABBTST41AABBTST41AABBTST41 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AABBTST60AABBTST60AABBTST60 /* PBXTargetDependency */,
+			);
+			name = DumptruckTests;
+			productName = DumptruckTests;
+			productReference = AABBTST10AABBTST10AABBTST10 /* DumptruckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -136,6 +192,10 @@
 				TargetAttributes = {
 					AABB007AAABB007AAABB007A = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					AABBTST50AABBTST50AABBTST50 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = AABB007AAABB007AAABB007A;
 					};
 				};
 			};
@@ -156,6 +216,7 @@
 			projectRoot = "";
 			targets = (
 				AABB007AAABB007AAABB007A /* Dumptruck */,
+				AABBTST50AABBTST50AABBTST50 /* DumptruckTests */,
 			);
 		};
 /* End PBXProject section */
@@ -166,6 +227,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				AABB002CAABB002CAABB002C /* Assets.xcassets in Resources */,
+				AABBSND01AABBSND01AABBSND01 /* Sounds in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABBTST42AABBTST42AABBTST42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,10 +260,41 @@
 				AABB0039AABB0039AABB0039 /* SoundPlayer.swift in Sources */,
 				AABB003EAABB003EAABB003E /* ShortcutNames.swift in Sources */,
 				AABB003FAABB003FAABB003F /* LaunchAtLoginManager.swift in Sources */,
+				AABB0042AABB0042AABB0042 /* SettingsWindowController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AABBTST40AABBTST40AABBTST40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AABBTST21AABBTST21AABBTST21 /* FilenameTemplateTests.swift in Sources */,
+				AABBTST22AABBTST22AABBTST22 /* FileWriterTests.swift in Sources */,
+				AABBTST23AABBTST23AABBTST23 /* DraftStoreTests.swift in Sources */,
+				AABBTST24AABBTST24AABBTST24 /* MarkdownHighlighterTests.swift in Sources */,
+				AABBTST25AABBTST25AABBTST25 /* SettingsStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXContainerItemProxy section */
+		AABBTST61AABBTST61AABBTST61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AABB008AAABB008AAABB008A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AABB007AAABB007AAABB007A;
+			remoteInfo = Dumptruck;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+		AABBTST60AABBTST60AABBTST60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AABB007AAABB007AAABB007A /* Dumptruck */;
+			targetProxy = AABBTST61AABBTST61AABBTST61 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AABB005AAABB005AAABB005A /* Debug */ = {
@@ -379,6 +479,44 @@
 			};
 			name = Release;
 		};
+		AABBTST71AABBTST71AABBTST71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.matchavez.DumptruckTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.9;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dumptruck.app/Contents/MacOS/Dumptruck";
+			};
+			name = Debug;
+		};
+		AABBTST72AABBTST72AABBTST72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.matchavez.DumptruckTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.9;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dumptruck.app/Contents/MacOS/Dumptruck";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -396,6 +534,15 @@
 			buildConfigurations = (
 				AABB005CAABB005CAABB005C /* Debug */,
 				AABB005DAABB005DAABB005D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AABBTST70AABBTST70AABBTST70 /* Build configuration list for PBXNativeTarget "DumptruckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AABBTST71AABBTST71AABBTST71 /* Debug */,
+				AABBTST72AABBTST72AABBTST72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
