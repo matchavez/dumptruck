@@ -1,6 +1,6 @@
 cask "dumptruck" do
   version "1.0.0"
-  sha256 "REPLACE_WITH_SHA256_FROM_MAKE_DMG"
+  sha256 "fde3321521c71720604dc21fc230990dc716401225914747ac2aab8c279091c8"
 
   url "https://github.com/matchavez/dumptruck/releases/download/v#{version}/Dumptruck-#{version}.dmg"
   name "Dumptruck"
